@@ -17,9 +17,9 @@ spring:
   #   database-platform: org.hibernate.dialect.SQLServerDialect
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/chat_multicast
-    username: postgres
-    password: 123456
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
     driver-class-name: org.postgresql.Driver
 
   jpa:
