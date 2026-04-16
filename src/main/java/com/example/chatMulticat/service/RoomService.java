@@ -28,6 +28,7 @@ public class RoomService {
     private final UserRepository userRepository;
     private final RoomMemberRepository roomMemberRepository;
 
+    @Transactional
     public List<RoomResponse> getAllRoom() {
         List<Room> rooms = roomRepository.findAll();
 

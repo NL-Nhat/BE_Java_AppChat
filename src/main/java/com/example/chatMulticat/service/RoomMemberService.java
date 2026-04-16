@@ -27,6 +27,7 @@ public class RoomMemberService {
     private final RoomRepository roomRepository;
     private final RoomMemberRepository roomMemberRepository;
 
+    @Transactional
     public List<RoomOfMemberResponse> getAllRoomOfUser(Integer userId) {
         User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("Ko tim thay user voi id nay"));
 
@@ -44,6 +45,7 @@ public class RoomMemberService {
         return rMemberResponses;
     }
 
+    @Transactional
     public List<String> getAllUserOfRoom(Integer roomId) {
         Room room = roomRepository.findById(roomId).orElseThrow(() -> new RuntimeException("Ko tim thay room voi id nay"));
 
