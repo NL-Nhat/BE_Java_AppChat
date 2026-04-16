@@ -7,14 +7,23 @@ spring:
   application:
     name: chatMulticsat
 
-  datasource:
-    url: jdbc:sqlserver://DESKTOP-SQ4JIQD:1433;databaseName=chat_multicast;encrypt=true;trustServerCertificate=true
-    username: sa
-    password: 123456
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  # datasource:
+  #   url: jdbc:sqlserver://DESKTOP-SQ4JIQD:1433;databaseName=chat_multicast;encrypt=true;trustServerCertificate=true
+  #   username: sa
+  #   password: 123456
+  #   driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     
+  # jpa:
+  #   database-platform: org.hibernate.dialect.SQLServerDialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/chat_multicast
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+
   jpa:
-    database-platform: org.hibernate.dialect.SQLServerDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
     hibernate:
       ddl-auto: none #Không làm gì với CSDL
