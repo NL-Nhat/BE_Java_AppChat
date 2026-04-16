@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity 
-@Table(name = "Rooms")
+@Table(name = "rooms")
 @Data
 public class Room {
 
@@ -23,16 +23,16 @@ public class Room {
     @Column(name = "room_id")
     private Integer id;
     
-    @Column(name = "roomName", nullable = false)
+    @Column(name = "roomname", nullable = false)
     private String roomName;
 
     @Column(name = "pass", nullable = false)
     private String pass;
     
-    @Column(name = "multicastIp", nullable = false, unique = true)
+    @Column(name = "multicastip", nullable = false, unique = true)
     private String multicastIp;
     
-    @Column(name = "createdAt", nullable = false)
+    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
     @OneToMany(mappedBy = "room")

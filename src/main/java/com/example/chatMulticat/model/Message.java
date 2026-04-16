@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "Messages")
+@Table(name = "messages")
 @Data
 public class Message {
     @Id 
@@ -32,6 +32,6 @@ public class Message {
     @Column(name = "content", columnDefinition = "NVARCHAR(MAX)")
     private String content;
 
-    @Column(name = "sentAt", nullable = false, updatable = false)
+    @Column(name = "sent_at", nullable = false, updatable = false)
     private LocalDateTime sentAt = LocalDateTime.now();
 }

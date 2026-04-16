@@ -16,7 +16,7 @@ import lombok.Data;
 
 @Entity
 @Table(
-    name = "RoomMembers",
+    name = "room_members",
     uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "room_id"})
 )
 @Data
@@ -34,6 +34,6 @@ public class RoomMember {
     @JoinColumn(name = "room_id", nullable = false)
     private Room room;
 
-    @Column(name = "joinedAt")
+    @Column(name = "joined_at")
     private LocalDateTime joinedAt = LocalDateTime.now();
 }
