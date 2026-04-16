@@ -41,6 +41,7 @@ public class MessageService {
         return "Lưu tin nhắn thành công";
     }   
 
+    @Transactional
     public List<MessageResponse> getMessagesOfRoom(Integer roomId) {
         Room room = roomRepo.findById(roomId)
                 .orElseThrow(() -> new RuntimeException("Không tìm thấy Room"));
